@@ -303,7 +303,7 @@ export const aboutMe = [
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
-    spareImg: "/grid.svg",
+    spareImg: "",
     direction: "left",
   },
   {
