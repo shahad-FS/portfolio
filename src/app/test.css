@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playpen+Sans+Arabic:wght@100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   نظام تسمية الألوان المعتمد لـ بورتفوليو شهد (Tailwind v4)
+   ========================================================================== */
+@theme {
+  --color-brand-black: #000000; /* أسود قاتم فخم */
+  --color-brand-clay: #a67b56; /* بني طيني دافئ متوهج */
+  --color-brand-clay-hover: #c19a74; /* درجة أفتح عند التمرير */
+  --color-brand-sand: #f7f4eb; /* أبيض كريمي مريح للعين */
+  --color-brand-coffee: #2c1a04; /* بني غامق جداً لنصوص الوضع الفاتح */
+  --color-brand-muted: #8c765c; /* ترابي باهت للنصوص الثانوية */
+  --color-brand-dark-card: #16120e; /* بني داكن جداً للكروت فوق الأسود */
+
+  /* تعريف كلاسات الخطوط لـ Tailwind v4 👇 */
+  --font-professional: "Oswald", sans-serif;
+  --font-gaming: "Roboto Mono", "Playpen Sans Arabic", monospace, cursive;
+}
+
+/* ==========================================================================
+   الوضع الداكن الافتراضي (أول ما يدخل المستخدم للموقع)
+   ========================================================================== */
+:root {
+  --background: var(--color-brand-black);
+  --foreground: var(--color-brand-sand);
+
+  --card: var(--color-brand-dark-card);
+  --card-foreground: var(--color-brand-sand);
+
+  --popover: var(--color-brand-dark-card);
+  --popover-foreground: var(--color-brand-sand);
+
+  --primary: var(--color-brand-clay);
+  --primary-foreground: var(--color-brand-sand);
+
+  --secondary: #1f1a14;
+  --secondary-foreground: var(--color-brand-sand);
+
+  --muted: var(--color-brand-muted);
+  --muted-foreground: var(--color-brand-sand);
+
+  --accent: var(--color-brand-clay);
+  --accent-foreground: var(--color-brand-black);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgb(255 255 255 / 10%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: var(--color-brand-clay);
+
+  --radius: 0.75rem;
+}
+
+/* @theme inline { */
+/* --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4); */
+/* } */
+
+/* ==========================================================================
+   التهيئة الإجبارية للخطوط (هنا السحر اللي كان ناقص!)
+   ========================================================================== */
+/* @layer base { */
+/* * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* هنا نجبر الموقع يتعرف على الكلاسات الجديدة للخطوط */
+/* .font-professional {
+    font-family: var(--font-professional);
+  }
+  .font-gaming {
+    /* font-family: var(--font-gaming); */
+/* } */
+/* } */
