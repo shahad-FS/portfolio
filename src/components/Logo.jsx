@@ -86,15 +86,20 @@ export default function Logo({ onComplete }) {
       id="logo"
       className="
         fixed
+        inline-block
+        whitespace-nowrap
         top-1/2
         left-1/2
         -translate-x-1/2
         -translate-y-1/2
         z-50
         text-5xl
+        sm:text-4xl
+        md:text-5xl
         font-bold
         text-yellow-500
         pointer-events-none
+  
       "
     >
       /{"${shahad}"}
